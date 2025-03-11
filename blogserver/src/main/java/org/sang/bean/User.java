@@ -27,50 +27,6 @@ public class User implements UserDetails {
     private String userface;
     private Timestamp regTime;
 
-//    public Timestamp getRegTime() {
-//        return regTime;
-//    }
-//
-//    public void setRegTime(Timestamp regTime) {
-//        this.regTime = regTime;
-//    }
-//
-//    public String getUserface() {
-//        return userface;
-//    }
-//
-//    public void setUserface(String userface) {
-//        this.userface = userface;
-//    }
-//
-//    public String getEmail() {
-//        return email;
-//    }
-//
-//    public void setEmail(String email) {
-//        this.email = email;
-//    }
-//
-//    public List<Role> getRoles() {
-//        return roles;
-//    }
-//
-//    public void setRoles(List<Role> roles) {
-//        this.roles = roles;
-//    }
-//
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//    public String getUsername() {
-//        return username;
-//    }
-
     //账户过期
     @Override
     @JsonIgnore
@@ -108,25 +64,4 @@ public class User implements UserDetails {
         }
         return authorities;
     }
-
-//    public void setUsername(String username) {
-//        this.username = username;
-//    }
-//
-//
-//    public String getPassword() {
-//        return password;
-//    }
-//
-//    public void setPassword(String password) {
-//        this.password = password;
-//    }
-//
-//    public String getNickname() {
-//        return nickname;
-//    }
-//
-//    public void setNickname(String nickname) {
-//        this.nickname = nickname;
-//    }
 }
