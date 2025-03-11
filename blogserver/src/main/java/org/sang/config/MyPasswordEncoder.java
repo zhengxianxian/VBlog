@@ -17,6 +17,7 @@ import org.springframework.util.DigestUtils;
 public class MyPasswordEncoder implements PasswordEncoder {
     @Override
     public String encode(CharSequence rawPassword) {
+        //对原始密码采用MD5加密算法进行加密处理，并返回处理后的字符串
         return DigestUtils.md5DigestAsHex(rawPassword.toString().getBytes());
     }
 

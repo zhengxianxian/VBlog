@@ -6,6 +6,7 @@ import org.sang.bean.RespBean;
 import org.sang.service.ArticleService;
 import org.sang.utils.Util;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -21,6 +22,7 @@ import java.util.*;
  */
 @RestController
 @RequestMapping("/article")
+//这是类级别的路径，该类下所有的请求的实际处理方法都要以/article开头
 public class ArticleController {
 
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
@@ -28,9 +30,11 @@ public class ArticleController {
     @Autowired
     ArticleService articleService;
 
+    //该请求的实际路径为/article/
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public RespBean addNewArticle(Article article) {
         int result = articleService.addNewArticle(article);
+
         if (result == 1) {
             return new RespBean("success", article.getId() + "");
         } else {
@@ -43,6 +47,8 @@ public class ArticleController {
      *
      * @return 返回值为图片的地址
      */
+
+    //该请求的实际路径为/article/uploading
     @RequestMapping(value = "/uploadimg", method = RequestMethod.POST)
     public RespBean uploadImg(HttpServletRequest req, MultipartFile image) {
         StringBuffer url = new StringBuffer();
@@ -70,6 +76,7 @@ public class ArticleController {
         return new RespBean("error", "上传失败!");
     }
 
+    //该请求的实际方法为/article/all
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public Map<String, Object> getArticleByState(@RequestParam(value = "state", defaultValue = "-1") Integer state, @RequestParam(value = "page", defaultValue = "1") Integer page, @RequestParam(value = "count", defaultValue = "6") Integer count,String keywords) {
         int totalCount = articleService.getArticleCountByState(state, Util.getCurrentUser().getId(),keywords);

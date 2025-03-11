@@ -1,43 +1,3 @@
-扫码加微信（微信ID：**a_java_boy2**），备注V部落，进群讨论。
-
-![](https://user-images.githubusercontent.com/6023444/75459026-ba70d500-59b9-11ea-8cbd-3d5889f356c4.png)
-
-V 部落姊妹篇：[https://github.com/lenve/vhr](https://github.com/lenve/vhr)
-
-V部落是一个多用户博客管理平台，采用Vue+SpringBoot开发。  
-
-项目演示地址： [http://45.77.146.32:8081/index.html](http://45.77.146.32:8081/index.html)  
-
-## 英雄帖
-
->项目还有许多待改进的地方，欢迎小伙伴提交pr，我会将大家完成的工作展示在README中！
-
-# 项目效果图  
-
-## 登陆页面
-
-![登录](https://raw.githubusercontent.com/lenve/VBlog/master/doc/login.png)  
-
-## 文章列表
-
-![文章列表](https://raw.githubusercontent.com/lenve/VBlog/master/doc/article.png)  
-
-## 发表文章
-
-![发表文章](https://raw.githubusercontent.com/lenve/VBlog/master/doc/post.png)  
-
-## 用户管理
-
-![用户管理](https://raw.githubusercontent.com/lenve/VBlog/master/doc/usermana.png)  
-
-## 栏目管理
-
-![栏目管理](https://raw.githubusercontent.com/lenve/VBlog/master/doc/category.png)  
-
-## 数据统计
-
-![数据统计](https://raw.githubusercontent.com/lenve/VBlog/master/doc/datastatistics.png)  
-
 # 技术栈  
 
 ## 后端技术栈
@@ -104,16 +64,4 @@ npm run build
 # 项目依赖  
 
 1.[vue-echarts](https://github.com/Justineo/vue-echarts)  
-2.[mavonEditor](https://github.com/hinesboy/mavonEditor)  
-
-# License
-
-MIT
-
-**欢迎小伙伴们star、fork。**  
-
-## 其他
-
-关注公众号**江南一点雨**，专注于 Spring Boot+微服务，定期视频教程分享，关注后回复 Java ，领取松哥为你精心准备的 Java 干货！
-
-![公众号二维码](http://www.javaboy.org/images/sb/javaboy.jpg)  
+2.[mavonEditor](https://github.com/hinesboy/mavonEditor)

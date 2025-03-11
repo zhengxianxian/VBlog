@@ -61,8 +61,8 @@
     </select>
     <update id="updateArticleState">
         UPDATE article SET state=#{state} WHERE id IN
-        <foreach collection="aids" item="aid" separator="," open="(" close=")">
-            #{aid}
+        <foreach collection="aids" item="id" separator="," open="(" close=")">
+            #{id}
         </foreach>
     </update>
     <update id="updateArticleStateById" >

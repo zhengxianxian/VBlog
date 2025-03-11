@@ -1,6 +1,8 @@
 package org.sang.bean;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,6 +14,8 @@ import java.util.List;
 /**
  * Created by sang on 2017/12/17.
  */
+@Getter
+@Setter
 public class User implements UserDetails {
     private Long id;
     private String username;
@@ -23,50 +27,51 @@ public class User implements UserDetails {
     private String userface;
     private Timestamp regTime;
 
-    public Timestamp getRegTime() {
-        return regTime;
-    }
+//    public Timestamp getRegTime() {
+//        return regTime;
+//    }
+//
+//    public void setRegTime(Timestamp regTime) {
+//        this.regTime = regTime;
+//    }
+//
+//    public String getUserface() {
+//        return userface;
+//    }
+//
+//    public void setUserface(String userface) {
+//        this.userface = userface;
+//    }
+//
+//    public String getEmail() {
+//        return email;
+//    }
+//
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
+//
+//    public List<Role> getRoles() {
+//        return roles;
+//    }
+//
+//    public void setRoles(List<Role> roles) {
+//        this.roles = roles;
+//    }
+//
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
+//
+//    public String getUsername() {
+//        return username;
+//    }
 
-    public void setRegTime(Timestamp regTime) {
-        this.regTime = regTime;
-    }
-
-    public String getUserface() {
-        return userface;
-    }
-
-    public void setUserface(String userface) {
-        this.userface = userface;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
+    //账户过期
     @Override
     @JsonIgnore
     public boolean isAccountNonExpired() {
@@ -104,24 +109,24 @@ public class User implements UserDetails {
         return authorities;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
+//    public void setUsername(String username) {
+//        this.username = username;
+//    }
+//
+//
+//    public String getPassword() {
+//        return password;
+//    }
+//
+//    public void setPassword(String password) {
+//        this.password = password;
+//    }
+//
+//    public String getNickname() {
+//        return nickname;
+//    }
+//
+//    public void setNickname(String nickname) {
+//        this.nickname = nickname;
+//    }
 }

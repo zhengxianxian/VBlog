@@ -21,7 +21,7 @@ public interface ArticleMapper {
 
     int getArticleCountByState(@Param("state") Integer state, @Param("uid") Long uid, @Param("keywords") String keywords);
 
-    int updateArticleState(@Param("aids") Long aids[], @Param("state") Integer state);
+    int updateArticleState(@Param("aids") Long[] aids, @Param("state") Integer state);
 
     int updateArticleStateById(@Param("articleId") Integer articleId, @Param("state") Integer state);
 

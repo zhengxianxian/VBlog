@@ -1,10 +1,15 @@
 package org.sang.bean;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.sql.Timestamp;
 
 /**
  * Created by sang on 2017/12/19.
  */
+@Getter
+@Setter
 public class Category {
     private Long id;
     private String cateName;
@@ -13,27 +18,27 @@ public class Category {
     public Category() {
     }
 
-    public Timestamp getDate() {
-        return date;
-    }
-
-    public void setDate(Timestamp date) {
-        this.date = date;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getCateName() {
-        return cateName;
-    }
-
-    public void setCateName(String cateName) {
-        this.cateName = cateName;
-    }
+//    public Timestamp getDate() {
+//        return date;
+//    }
+//
+//    public void setDate(Timestamp date) {
+//        this.date = date;
+//    }
+//
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
+//
+//    public String getCateName() {
+//        return cateName;
+//    }
+//
+//    public void setCateName(String cateName) {
+//        this.cateName = cateName;
+//    }
 }
