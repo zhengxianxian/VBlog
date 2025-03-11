@@ -22,13 +22,13 @@
 6.vue-router  
 
 还有其他一些琐碎的技术我就不在这里一一列举了。   
-
+IDEA没有将项目识别为maven项目的解决办法：找到pom.xml文件后右键，有识别为maven项目的选项
 # 快速运行  
 
 1.克隆本项目到本地  
 
 ```
-git@github.com:lenve/VBlog.git
+git clone https://github.com/zhengxianxian/VBlog
 ```  
 
 2.找到blogserver项目中resources目录下的vueblog.sql文件，在MySQL数据库中执行  
@@ -47,6 +47,9 @@ npm install
 npm run dev
 ```  
 
+<font color="purple"> npm 版本不兼容时解决办法：如果你npm install报错，提示gyp err xxx/gyp verb could not find "python"
+解决办法：删除package.json中的以下两条"node-sass": "^4.7.2","sass-loader": "^6.0.6",然后重新npm install即可
+</font>
 由于我在vueblog项目中已经配置了端口转发，将数据转发到SpringBoot上，因此项目启动之后，在浏览器中输入```http://localhost:8080```就可以访问我们的前端项目了，所有的请求通过端口转发将数据传到SpringBoot中（注意此时不要关闭SpringBoot项目）。  
 
 6.最后可以用WebStorm等工具打开vueblog项目，继续开发，开发完成后，当项目要上线时，依然进入到vueblog目录，然后执行如下命令：  
